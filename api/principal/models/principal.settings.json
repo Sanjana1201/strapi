@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "principals",
+  "info": {
+    "name": "Principal",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PrincipalName": {
+      "type": "string"
+    },
+    "students": {
+      "collection": "student",
+      "via": "principal"
+    },
+    "teachers": {
+      "collection": "teacher",
+      "via": "principal"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "Student"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StudentName": {
+      "type": "string"
+    },
+    "principal": {
+      "via": "students",
+      "model": "principal"
+    },
+    "teacher": {
+      "via": "students",
+      "model": "teacher"
+    }
+  }
+}
